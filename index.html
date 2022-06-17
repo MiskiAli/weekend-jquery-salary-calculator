@@ -23,16 +23,19 @@
 
     <!-- The application should have an input form that collects _employee
          first name, last name, ID number, job title, annual salary_. -->
-<form action="">
+<div class="inputWrapper">
 
-<input placeholder="First Name" type="text">
-<input placeholder="Last Name" type="text">
-<input placeholder="Employee ID" type="text">
-<input placeholder="Job Title" type="text">
-<input placeholder="Annual Salary" type="text">
+<input placeholder="First Name" class="firstName" type="text">
+<input placeholder="Last Name" class="lastName" type="text">
+<input placeholder="Employee ID" class="employeeId" type="text">
+<input placeholder="Job Title" class="jobTitle" type="text">
+<input placeholder="Annual Salary" class="annualSalary"  type="text">
 
 <!-- A 'Submit' button -->
-<input id='submitButton' value="Submit" type="submit">
+<button id='submitButton' type="submit">Submit</button>
+
+</div>
+
 
 <h2>Employees</h2>
 
@@ -48,12 +51,13 @@
     <!-- Create a delete button that removes an employee from the DOM. 
         For Base mode, it does **not** need to remove that Employee's salary from the reported total. -->
     <tr>
-        <td id="frist-name"></td>
+        <td id="first-name"></td>
         <td id="last-name"></td>
         <td id="employee"></td>
         <td id="job-title"></td>
+        <td id="annual-salary"></td>
         <td id="something"></td>
-        
+
         <td><button id ="deleteButton">delete</button></td>
     </tr>
 

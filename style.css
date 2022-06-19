@@ -56,15 +56,14 @@ table{
     padding: 20px;
 }
 
-
-tr:nth-child(even),
-td{
+td,
+tr{
     color:  rgb(233, 253, 254);
-    
-    background-color: rgb(119, 118, 118), 0.6;
     border: 1px solid black;
     min-width: 100px;
     padding: 20px;
 }
 
-
+tr:nth-child(odd){
+    background-color:  rgba(93, 156, 159, 0.6);
+}

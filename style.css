@@ -23,6 +23,7 @@ background-color: rgb(183, 219, 207);
 td, 
 th, 
 tr{
+    
     border: 1px solid black;
     min-width: 100px;
     padding: 20px;

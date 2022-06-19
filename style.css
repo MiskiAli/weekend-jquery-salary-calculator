@@ -1,8 +1,23 @@
+header{
+    color: rgb(138, 1, 28);
+    background-color: rgb(233, 189, 197);
+}
+
+h2 {
+    color: rgb(138, 1, 28);
+
+}
+
+input {
+    background-color: rgb(233, 189, 197);
+}
+
 body {
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+background-color: rgb(183, 219, 207);
 }
 
 td, 

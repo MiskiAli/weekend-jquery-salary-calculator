@@ -18,12 +18,13 @@ function addsValue(){
     let jobTitleInfo = $('.jobTitle');
     let annualsalaryInfo = $('.annualSalary');
 
+    // added new employee as object
     let employeesNew = {
-        firstName: firstNameEver,
-        lastName:lastNameGreatest,
-        employeeId:employeeIdInfo, 
-        jobTitle:jobTitleInfo, 
-        annualSalary:annualsalaryInfo,
+        firstName: firstNameEver.val(),
+        lastName:lastNameGreatest.val(),
+        employeeId: Number (employeeIdInfo.val()), 
+        jobTitle:jobTitleInfo.val(), 
+        annualSalary: Number (annualsalaryInfo.val()),
     }
     // push to dom
     employees.push(employeesNew);
@@ -63,21 +64,27 @@ function takesValue(){
 
     let tr =$(this).parents('tr');
     tr.remove();
-    alert('Employee has been deleted!', employees);
 }
 
+// calculate 
 function monthlyTotal(){
     let total = 0;
+
     $('.totalMonthlyCost').empty();
-    for (let employee of employees){
-      total += Number(employees.annualSalary);
+    for (let employeesNew of employees){
+
+    total += employeesNew.annualSalary;
+    total /= 12
     }
-    $('.totalMonthlyCost').append(`Total Monthly Cost: ${total / 12}`);
-    
-    if((total/12) >= 20000){
-      $('.totalMonthlyCost').css('background-color', 'red');
+
+    $('.totalMonthlyCost').append(`Total Monthly Cost: ${total /= 12}`);
+    // $('.totalMonthlyCost').text(total);
+
+// turning it red if it goes over 20k
+    if ((total /= 12) >= 20000) {
+    $('.totalMonthlyCost').css('background-color', 'red');
     }
-    
+
 }
     // $('#first-name').empty(isDeleted);
     // $('#last-name').empty(lastNameGreatest);
